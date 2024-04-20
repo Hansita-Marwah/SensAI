@@ -1,0 +1,129 @@
+{
+    "intents": [
+      {
+        "tag": "Greeting",
+        "patterns": [
+          "Hi",
+          "Hello",
+          "Hey there",
+          "Good morning!",
+          "Good afternoon",
+          "Howdy",
+          "Greetings",
+          "Hi there",
+          "Hey"
+        ],
+        "responses": [
+          "Hi! How can I help you today?",
+          "Hello! What can I assist you with?",
+          "Hey there! What brings you here?",
+          "Good morning! How may I assist you?",
+          "Good afternoon! How can I help?",
+          "Howdy! What can I do for you?",
+          "Greetings! How may I assist you today?",
+          "Hi there! What brings you to chat with me?",
+          "Hey! How can I assist you?"
+        ]
+      },
+      {
+        "tag": "ExerciseRecommendation",
+        "patterns": [
+          "Can you recommend some exercises for weight loss?",
+          "What exercises should I do to improve my flexibility?",
+          "I want to start exercising. Where should I begin?",
+          "What's the best workout for building muscle?",
+          "How can I increase my stamina?",
+          "Can you suggest some cardio exercises?",
+          "What are some good bodyweight exercises?",
+          "Do you have any recommendations for home workouts?",
+          "How can I improve my endurance?"
+        ],
+        "responses": [
+          "Sure! For weight loss, you can try cardio exercises like running, cycling, or swimming.",
+          "To improve flexibility, consider yoga or Pilates.",
+          "Starting with brisk walking or light jogging is a great way to begin your exercise routine.",
+          "For muscle building, focus on resistance training exercises like weightlifting or bodyweight exercises.",
+          "Increasing stamina can be achieved through activities like interval training, circuit training, or endurance exercises.",
+          "Some effective cardio exercises include running, cycling, jumping rope, and rowing.",
+          "Bodyweight exercises like push-ups, squats, lunges, and planks are great for building strength and endurance.",
+          "You can try bodyweight exercises, yoga, or HIIT workouts for effective home workouts.",
+          "Improving endurance can be accomplished through activities like running, swimming, cycling, and rowing."
+        ]
+      },
+      {
+        "tag": "HealthIssueInquiry",
+        "patterns": [
+          "I've been feeling tired lately. What could be the cause?",
+          "My back hurts. What should I do?",
+          "I'm experiencing headaches frequently. Any advice?",
+          "How can I improve my sleep quality?",
+          "I feel dizzy often. What should I do?",
+          "I've been having trouble breathing. What could be wrong?",
+          "I've been feeling anxious lately. Any tips for managing anxiety?",
+          "My stomach has been upset. Any remedies?",
+          "I've been feeling weak and fatigued. What should I do?"
+        ],
+        "responses": [
+          "Fatigue can be caused by various factors such as stress, lack of sleep, or poor nutrition.",
+          "Back pain may be due to poor posture, muscle strain, or underlying medical conditions. Consider consulting a healthcare professional for proper diagnosis and treatment.",
+          "Frequent headaches could be a sign of dehydration, stress, or underlying health issues. Make sure to stay hydrated and consider seeking medical advice if they persist.",
+          "Improving sleep quality can be achieved by establishing a consistent sleep schedule, creating a relaxing bedtime routine, and ensuring a comfortable sleep environment.",
+          "Feeling dizzy often may indicate an underlying health issue. It's important to consult a healthcare professional to determine the cause and receive appropriate treatment.",
+          "Difficulty breathing could be a sign of respiratory problems, allergies, or other health issues. Seek medical attention if breathing problems persist or worsen.",
+          "Managing anxiety can involve relaxation techniques, deep breathing exercises, regular exercise, and seeking support from friends, family, or a mental health professional.",
+          "For an upset stomach, try drinking ginger tea, eating bland foods like bananas or rice, and avoiding spicy or fatty foods.",
+          "Feeling weak and fatigued may be a sign of an underlying health issue or nutrient deficiency. Consider consulting a healthcare professional for evaluation and advice."
+        ]
+      },
+      {
+        "tag": "InjuryInquiry",
+        "patterns": [
+          "I hurt my ankle while running. What should I do?",
+          "I twisted my knee during a workout. Any recommendations?",
+          "I injured my shoulder while lifting weights. How should I treat it?",
+          "I have a sprained wrist. What's the best way to recover?",
+          "I pulled a muscle in my back. What exercises can I do?",
+          "I have a sore elbow from playing tennis. Any advice?",
+          "I've been feeling pain in my hips after running. What could be the cause?",
+          "I injured my neck from poor posture. How can I relieve the pain?",
+          "I hurt my hand while rock climbing. What should I do?"
+        ],
+        "responses": [
+          "If you've injured your ankle, it's important to rest, ice, compress, and elevate (RICE) the affected area. Consider seeing a healthcare professional for further evaluation and treatment.",
+          "For a twisted knee, rest the knee, apply ice, compress with a bandage, and elevate the leg. Avoid putting weight on the knee and seek medical attention if there is severe pain or swelling.",
+          "If you've injured your shoulder while lifting weights, it's essential to avoid further strain and apply ice to reduce swelling. Consult a healthcare professional for proper diagnosis and treatment.",
+          "For a sprained wrist, immobilize the wrist with a splint or brace, apply ice, and elevate the hand. Avoid activities that may aggravate the injury and consider seeking medical advice.",
+          "If you've pulled a muscle in your back, it's important to rest the affected area, apply ice to reduce inflammation, and avoid activities that worsen the pain. Gentle stretching and strengthening exercises may help with recovery, but consult a healthcare professional for personalized advice.",
+          "Sore elbows from tennis may be due to overuse or improper technique. Rest, ice, and stretching exercises can help alleviate pain. Consider consulting a coach or physiotherapist for guidance on technique and injury prevention.",
+          "Pain in the hips after running may be due to muscle strain, overuse, or underlying issues. Consider adjusting your running technique, wearing proper footwear, and doing hip-strengthening exercises. If the pain persists, consult a healthcare professional.",
+          "To relieve neck pain from poor posture, focus on maintaining proper posture, perform neck stretches and strengthening exercises, and consider using ergonomic furniture. If the pain persists, seek medical advice.",
+          "If you've hurt your hand while rock climbing, apply ice to reduce swelling, and immobilize the hand with a splint or brace if necessary. Seek medical attention if there is severe pain or difficulty moving the hand."
+        ]
+      },
+      {
+        "tag": "ThankYou",
+        "patterns": [
+          "Thank you!",
+          "Thanks for your help",
+          "Appreciate it",
+          "I appreciate your assistance",
+          "Thanks a lot",
+          "Thanks so much",
+          "Thank you very much",
+          "Thank you for your time",
+          "Thank you for the information"
+        ],
+        "responses": [
+          "You're welcome! Feel free to ask if you have any more questions.",
+          "No problem at all! Let me know if there's anything else I can assist you with.",
+          "Glad I could help! If you need further assistance, just ask.",
+          "You're welcome! It's my pleasure to assist you.",
+          "Happy to help! Don't hesitate to reach out if you need anything else.",
+          "Thanks for your kind words! Let me know if there's anything else I can do for you.",
+          "Thank you! I'm here to help anytime you need assistance.",
+          "You're welcome! If you have any more questions, feel free to ask.",
+          "You're welcome! If you need more information, just let me know."
+        ]
+      }
+    ]
+  }
