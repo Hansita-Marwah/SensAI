@@ -1,0 +1,60 @@
+*{ 
+    margin:0px; 
+    padding: 0px; 
+    box-sizing: border-box; 
+    text-align: center; 
+    color:#131111; 
+    line-height: 1.5; 
+    letter-spacing:1px; 
+} 
+ 
+.complete 
+{ 
+     
+    min-height: 100vh; 
+    width:100%;  
+    background-image: linear-gradient(rgba(200, 187, 187, 0.56), rgba(212, 200, 200, 0.566)) ,url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExanZrY2JmNmRnem03Z2lnZm94anpzenR3OGJ3bzk2bzN0ZDk0em5lcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4bjIKBOWUnVPICCzJc/giphy.gif"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+     
+} 
+ 
+.data 
+{ 
+    padding: 40px 100px; 
+} 
+ 
+article p 
+{ 
+    font-size: 18px; 
+} 
+ 
+article h1 
+{ 
+    font-size: 80px; 
+    font-weight: 800; 
+    letter-spacing: 1.6px; 
+    text-transform: uppercase; 
+ 
+} 
+ 
+article h1:after 
+{ 
+    content: ""; 
+    height: 5px; 
+    width: 225px; 
+    background-color: #100e0e; 
+    display: block; 
+    margin: auto; 
+} 
+ 
+ 
+ 
+blockquote 
+{ 
+    font-family: sans-serif; 
+    font-size: 25px; 
+    margin-top: 70px; 
+    font-weight: 100; 
+}

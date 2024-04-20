@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Processing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            position: relative;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        video {
+            transform: scaleX(-1); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: auto; 
+            max-width: 640px; 
+            max-height: 480px; 
+            margin: auto; 
+            border-radius: 10px;
+            pointer-events: none; 
+        }
+
+        #buttonContainer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px; 
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Live Webcam Processing</h1>
+        <video id="webcam" width="640" height="480" autoplay></video>
+        <canvas id="outputCanvas" width="640" height="480"></canvas>
+        <div id="buttonContainer">
+            <button id="startButton">Start Camera</button>
+            <button id="stopButton">Stop Camera</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <script>
+        const video = document.getElementById('webcam');
+        const outputCanvas = document.getElementById('outputCanvas');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        let stream;
+
+        startButton.addEventListener('click', async () => {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+
+                
+                const net = await posenet.load();
+
+                
+                async function detectAndDrawPoses() {
+                    const pose = await net.estimateSinglePose(video);
+
+                
+                    const context = outputCanvas.getContext('2d');
+                    context.clearRect(0, 0, outputCanvas.width, outputCanvas.height);
+
+                    
+                    drawPose(pose, context);
+                }
+
+               
+                function drawPose(pose, context) {
+       
+                    pose.keypoints.forEach(keypoint => {
+                        if (keypoint.score > 0.2) {
+                    
+                            const adjustedX = video.width - keypoint.position.x;
+                            context.beginPath();
+                            context.arc(adjustedX, keypoint.position.y, 5, 0, 2 * Math.PI);
+                            context.fillStyle = '#00ff00';
+                            context.fill();
+                        }
+                    });
+                }
+
+              
+                setInterval(detectAndDrawPoses, 100); 
+            } catch (error) {
+                console.error('Error accessing webcam:', error);
+            }
+        });
+
+        stopButton.addEventListener('click', () => {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+            }
+        });
+    </script>
+</body>
+</html>
