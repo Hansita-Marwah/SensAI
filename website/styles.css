@@ -51,20 +51,23 @@ nav ul {
 nav ul li {
     display: flex;
     margin-right: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: transparent;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: rgb(164, 96, 227); /* Change color on hover */
-    background-color: #33333382;
+    color: rgb(156, 7, 236); /* Change color on hover */
+    background-color: #14008591;
     transition: background-color 0.3s;
-
 }
 
 /* Style the main sections */
@@ -132,6 +135,7 @@ button:o {
 .dropdown{
     position: relative;
     color: white;
+    display: inline-block;
 
 }
 .dropbtn {
@@ -153,25 +157,23 @@ button:o {
 	position: absolute;
 	background-color: #f9f9f9;
 	min-width: 160px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	z-index: 1;
-    margin-top: 24px;
+    margin-top: 10px;
     left: 0;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
     border-radius: 10px;
     visibility: hidden;
 }
 
   /* Links inside the dropdown */
 .dropdown-content a {
-	display: block;
-	padding: 10px 20px;
+	display: block;;
 	color: #333;
 	text-decoration: none;
-	transition: background-color 0.3 s ease;
+	transition: background-color 0.3s ease-in-out;
 } 
   /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
