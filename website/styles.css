@@ -9,9 +9,9 @@ body, h1, h2, h3, p, ul, li {
 /* Set a background color and font for the body */
 body {
     font-family: OCR A Std, monospace;
-    background: rgb(34,71,157);
-    background: radial-gradient(circle, rgba(34,71,157,1) 27%, rgba(125,68,204,1) 100%);
-    color: white;
+    background: #22479d;
+background: radial-gradient(circle, #22479d 57%, #7d44cc 100%);
+color: white;
 }
 
 /* Style the header */
@@ -45,6 +45,7 @@ nav ul {
     text-align:center;
     background: rgba(9, 66, 200, 0.281);
     bottom: 0;
+    font-size: 20px;
     
 }
 
@@ -52,22 +53,23 @@ nav ul li {
     display: flex;
     margin-right: 20px;
     padding: 10px;
+    margin-top: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     display: inline-block;
-    padding: 10px 20px;
+    
     text-decoration: none;
     background-color: transparent;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: rgb(156, 7, 236); /* Change color on hover */
-    background-color: #14008591;
+    color:#bc80df; /* Change color on hover */
     transition: background-color 0.3s;
+    
 }
 
 /* Style the main sections */
@@ -100,21 +102,6 @@ footer {
 }
 
 /* Style the buttons */
-button {
-    background-color: rgb(118, 48, 199);
-    float: middle;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    font-size: 1em;
-    margin: 0px;
-    cursor: pointer;
-    font-weight: bolder;
-    border-radius: 15px;
-    letter-spacing: 2px;
-    transition: background-color 0.5s ease;
-    font-family: OCR A Std, monospace;
-}
 
 button:o {
     background-color: rgba(0, 0, 0, 0.2); /* Darker color on hover */
@@ -127,15 +114,13 @@ button:o {
 }
 
 
-.button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
 /* Dropdown button */
 .dropdown{
     position: relative;
     color: white;
     display: inline-block;
+    transition: background-color 1s ease;
+    margin-bottom: 20px;
 
 }
 .dropbtn {
@@ -146,6 +131,7 @@ button:o {
 
 .dropbtn:hover {
 	background-color: rgba(0, 0, 0, 0.2); /* Darker color on hover */
+    transition-timing-function: ease-in-out;
 }
 
 
@@ -159,12 +145,12 @@ button:o {
 	min-width: 160px;
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	z-index: 1;
-    margin-top: 10px;
     left: 0;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
     border-radius: 10px;
+    
     visibility: hidden;
 }
 
@@ -174,6 +160,8 @@ button:o {
 	color: #333;
 	text-decoration: none;
 	transition: background-color 0.3s ease-in-out;
+    padding: 10px 20px;
+
 } 
   /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
@@ -187,6 +175,6 @@ button:o {
 	display: block;
     opacity:1;
     visibility: visible;
-    max-height: 300px;
+    max-height: 500px;
 }
 
